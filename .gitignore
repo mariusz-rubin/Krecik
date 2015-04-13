@@ -1,0 +1,7 @@
+bin
+obj
+Generator.sln.ide
+*.suo
+*.pdb
+*.dll
+*.exe
