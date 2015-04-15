@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Generator.HotKeys
+namespace Krecik.HotKeys
 {
     public class KeyPressedEventArgs : EventArgs
     {

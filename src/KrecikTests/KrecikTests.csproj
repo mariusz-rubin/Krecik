@@ -6,8 +6,8 @@
     <ProjectGuid>{B5A530B5-5272-48DA-8762-B08D09D272BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeneratorTests</RootNamespace>
-    <AssemblyName>GeneratorTests</AssemblyName>
+    <RootNamespace>KrecikTests</RootNamespace>
+    <AssemblyName>KrecikTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -33,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,9 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Generator\Generator.csproj">
+    <ProjectReference Include="..\Krecik\Krecik.csproj">
       <Project>{d92617c7-1784-4a02-a401-9ed9d03f594a}</Project>
-      <Name>Generator</Name>
+      <Name>Krecik</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -1,11 +1,11 @@
-﻿using Generator.HotKeys;
-using Generator.Nip;
-using Generator.Pesel;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Krecik.HotKeys;
+using Krecik.Nip;
+using Krecik.Pesel;
 
-namespace Generator
+namespace Krecik
 {
-    public partial class GeneratorForm : Form
+    public partial class KrecikForm : Form
     {
         private readonly HotKeyManager _hotKeyManager;
         private readonly NipGenerator _nipGenerator;
@@ -14,7 +14,7 @@ namespace Generator
         private ContextMenu notifyIconMenu;
         private MenuItem closeAppMenuItem;
 
-        public GeneratorForm()
+        public KrecikForm()
         {
             InitializeComponent();
             InitControls();

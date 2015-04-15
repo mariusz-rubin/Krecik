@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Generator.HotKeys
+namespace Krecik.HotKeys
 {
     internal class HotKeyManager : NativeWindow, IDisposable
     {

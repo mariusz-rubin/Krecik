@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Generator.Pesel
+namespace Krecik.Pesel
 {
     public class PeselValidator
     {

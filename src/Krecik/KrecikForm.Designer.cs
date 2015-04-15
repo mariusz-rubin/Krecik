@@ -1,6 +1,6 @@
-﻿namespace Generator
+﻿namespace Krecik
 {
-    partial class GeneratorForm
+    partial class KrecikForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneratorForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KrecikForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbPesel = new System.Windows.Forms.ComboBox();
             this.cmbNip = new System.Windows.Forms.ComboBox();

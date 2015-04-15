@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Generator.Nip
+namespace Krecik.Nip
 {
     internal class NipCheckSumCalculator
     {

@@ -1,12 +1,8 @@
-﻿using Generator.Pesel;
+﻿using System;
+using Krecik.Pesel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GeneratorTests.Pesel
+namespace KrecikTests.Pesel
 {
     [TestClass]
     public class PeselGeneratorTests

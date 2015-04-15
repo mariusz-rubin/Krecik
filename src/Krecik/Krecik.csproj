@@ -7,8 +7,8 @@
     <ProjectGuid>{D92617C7-1784-4A02-A401-9ED9D03F594A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Generator</RootNamespace>
-    <AssemblyName>Generator</AssemblyName>
+    <RootNamespace>Krecik</RootNamespace>
+    <AssemblyName>Krecik</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,13 +26,14 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Generator.Program</StartupObject>
+    <StartupObject>Krecik.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratorForm.cs">
+    <Compile Include="KrecikForm.cs">
       <SubType>form</SubType>
     </Compile>
-    <Compile Include="GeneratorForm.Designer.cs">
-      <DependentUpon>GeneratorForm.cs</DependentUpon>
+    <Compile Include="KrecikForm.Designer.cs">
+      <DependentUpon>KrecikForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HotKeys\HotKeyManager.cs" />
     <Compile Include="HotKeys\HotKey.cs" />
@@ -70,8 +71,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GeneratorForm.resx">
-      <DependentUpon>GeneratorForm.cs</DependentUpon>
+    <EmbeddedResource Include="KrecikForm.resx">
+      <DependentUpon>KrecikForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

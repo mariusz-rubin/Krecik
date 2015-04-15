@@ -1,7 +1,6 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
-namespace Generator.Pesel
+namespace Krecik.Pesel
 {
     public class PeselCheckSumCalculator
     {

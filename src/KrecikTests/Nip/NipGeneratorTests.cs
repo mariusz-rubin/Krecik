@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Krecik.Nip;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Generator.Nip;
 
-namespace GeneratorTests.Nip
+namespace KrecikTests.Nip
 {
     [TestClass]
     public class NipGeneratorTests

@@ -1,4 +1,4 @@
-﻿namespace Generator.Nip
+﻿namespace Krecik.Nip
 {
     internal static class TaxOffice
     {

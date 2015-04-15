@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Generator.Nip
+namespace Krecik.Nip
 {
     public class NipGenerator
     {

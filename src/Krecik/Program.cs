@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Generator
+namespace Krecik
 {
     static class Program
     {
@@ -10,7 +10,7 @@ namespace Generator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GeneratorForm());
+            Application.Run(new KrecikForm());
         }
     }
 }

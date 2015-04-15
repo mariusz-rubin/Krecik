@@ -1,6 +1,6 @@
 bin
 obj
-Generator.sln.ide
+Krecik.sln.ide
 *.suo
 *.pdb
 *.dll

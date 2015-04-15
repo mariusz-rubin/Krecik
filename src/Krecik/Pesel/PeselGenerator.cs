@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Generator.Pesel
+namespace Krecik.Pesel
 {
     public class PeselGenerator
     {

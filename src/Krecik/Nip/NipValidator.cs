@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Generator.Nip
+namespace Krecik.Nip
 {
     public class NipValidator
     {

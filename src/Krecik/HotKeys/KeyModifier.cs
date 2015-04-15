@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Generator.HotKeys
+namespace Krecik.HotKeys
 {
     [Flags]
     public enum KeyModifier
