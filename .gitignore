@@ -5,3 +5,5 @@ Krecik.sln.ide
 *.pdb
 *.dll
 *.exe
+*.msi
+Release

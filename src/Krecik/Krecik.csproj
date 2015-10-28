@@ -50,16 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KrecikForm.cs">
+    <!-- <Compile Include="KrecikForm.cs">
       <SubType>form</SubType>
     </Compile>
     <Compile Include="KrecikForm.Designer.cs">
       <DependentUpon>KrecikForm.cs</DependentUpon>
-    </Compile>
+    </Compile> -->
     <Compile Include="HotKeys\HotKeyManager.cs" />
     <Compile Include="HotKeys\HotKey.cs" />
     <Compile Include="HotKeys\KeyModifier.cs" />
     <Compile Include="HotKeys\KeyPressedEventArgs.cs" />
+    <Compile Include="KrecikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KrecikForm.Designer.cs">
+      <DependentUpon>KrecikForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nip\NipCheckSumCalculator.cs" />
     <Compile Include="Nip\NipGenerator.cs" />
     <Compile Include="Nip\NipValidator.cs" />
