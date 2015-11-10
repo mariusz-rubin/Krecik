@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Krecik.HotKeys
 {
-    internal class HotKeyManager : NativeWindow, IDisposable
+    public class HotKeyManager : NativeWindow, IDisposable
     {
         private const int WM_HOTKEY = 0x0312;
 

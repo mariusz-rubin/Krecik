@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrecikTests", "KrecikTests\
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KrecikSetup", "KrecikSetup\KrecikSetup.vdproj", "{387FC3A3-855E-40E2-8D4A-ED9897A18AE9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{2B3EA6FC-7242-4F0B-A776-72C99203FFAF}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrecikWpf", "KrecikWpf\KrecikWpf.csproj", "{CDD47C12-3DE4-4404-8941-54C5BBB40C7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +33,10 @@ Global
 		{B5A530B5-5272-48DA-8762-B08D09D272BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{387FC3A3-855E-40E2-8D4A-ED9897A18AE9}.Debug|Any CPU.ActiveCfg = Debug
 		{387FC3A3-855E-40E2-8D4A-ED9897A18AE9}.Release|Any CPU.ActiveCfg = Release
+		{CDD47C12-3DE4-4404-8941-54C5BBB40C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD47C12-3DE4-4404-8941-54C5BBB40C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD47C12-3DE4-4404-8941-54C5BBB40C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD47C12-3DE4-4404-8941-54C5BBB40C7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
