@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KrecikWpf"
         mc:Ignorable="d"        
         Title="Krecik" Height="351.882" Width="176.707" ShowInTaskbar="False" ResizeMode="NoResize" WindowStyle="ToolWindow">
-    <Grid Margin="0,0,3.4,-0.8">
+    <Grid Margin="0,0,3.4,3.2">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition/>
@@ -16,11 +16,17 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Content="Ostatnio wygenerowane:" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="21" Margin="10,25,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1" SelectionChanged="comboBox_SelectionChanged">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="21" Margin="10,25,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1" SelectionChanged="comboBox_SelectionChanged" SelectedIndex="0">
             <ComboBoxItem Content="NIP" x:Name="nipItem"/>
             <ComboBoxItem Content="PESEL" x:Name="peselItem"/>
         </ComboBox>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="206" Margin="10,51,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
-        <Button x:Name="button" Content="Ustawienia" HorizontalAlignment="Left" Height="35" Margin="10,262,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="206" Margin="10,51,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBox Text="{Binding Path=., Mode=OneWay}" IsReadOnly="True" BorderBrush="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnClear" Content="Wyczyść historię" HorizontalAlignment="Left" Height="35" Margin="10,262,0,0" VerticalAlignment="Top" Width="144" Grid.Row="1" Click="btnClear_Click"/>
     </Grid>
 </Window>

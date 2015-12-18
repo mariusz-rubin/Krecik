@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace KrecikWpf
 {
@@ -35,11 +36,14 @@ namespace KrecikWpf
 
         private List<string> _nipsHistory = new List<string>();
         private List<string> _peselsHistory = new List<string>();
+
+        private ObservableCollection<string> _numbersCollection = new ObservableCollection<string>();        
         
         public MainWindow()
         {
             InitializeComponent();
             InitializeNotifyIcon();
+            InitializeBinding();
             InitializeHotKeys();
 
             this.Visibility = Visibility.Hidden;
@@ -58,7 +62,7 @@ namespace KrecikWpf
                 {
                     string newNip = _nipGenerator.Generate();
                     SendKeys.SendWait(newNip);
-                    _nipsHistory.Add(newNip);
+                    AddNipNumberToHistory(newNip);
                 });
 
             _hotKeyManager.RegisterHotKey(
@@ -68,7 +72,7 @@ namespace KrecikWpf
                 {
                     string newPesel = _peselGenerator.Generate();
                     SendKeys.SendWait(newPesel);
-                    _peselsHistory.Add(newPesel);
+                    AddPeselNumberToHistory(newPesel);
                 });
 
             _hotKeyManager.RegisterHotKey(
@@ -95,6 +99,11 @@ namespace KrecikWpf
             notifyIcon.ContextMenu = notifyIconMenu;
 
             notifyIcon.Visible = true;
+        }
+
+        private void InitializeBinding()
+        {
+            listBox.ItemsSource = _numbersCollection;
         }
 
         private void NotifyIcon_Click(object sender, EventArgs e)
@@ -127,25 +136,56 @@ namespace KrecikWpf
             this.Close();
         }
 
-        private void FillList(IEnumerable<string> newItems)
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            listBox.Items.Clear();
-            foreach(var newItem in newItems)
-            {
-                listBox.Items.Add(newItem);
-            }
+            FillSelectedList();
         }
 
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void FillSelectedList()
         {
             if (comboBox.SelectedItem == nipItem)
             {
-                FillList(_nipsHistory.Reverse<string>());
+                _numbersCollection.Clear();
+                foreach(string nip in _nipsHistory.Reverse<string>())
+                {
+                    _numbersCollection.Add(nip);
+                }
             }
             else if (comboBox.SelectedItem == peselItem)
             {
-                FillList(_peselsHistory.Reverse<string>());
+                _numbersCollection.Clear();
+                foreach(var pesel in _peselsHistory.Reverse<string>())
+                {
+                    _numbersCollection.Add(pesel);
+                }
             }
+        }
+
+        private void AddNipNumberToHistory(string number)
+        {
+            _nipsHistory.Add(number);
+
+            if (comboBox.SelectedItem == nipItem)
+            {
+                _numbersCollection.Insert(0, number);
+            }          
+        }
+
+        private void AddPeselNumberToHistory(string number)
+        {
+            _peselsHistory.Add(number);
+
+            if (comboBox.SelectedItem == peselItem)
+            {
+                _numbersCollection.Insert(0, number);
+            }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            _nipsHistory.Clear();
+            _peselsHistory.Clear();
+            _numbersCollection.Clear();
         }
     }
 }
